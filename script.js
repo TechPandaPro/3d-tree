@@ -61,6 +61,39 @@ setInterval(() => {
   snow.style.left = `${posLeft + window.innerWidth}px`;
 }, 100);
 
+const treeFaces = Array.from(
+  document.querySelectorAll(".tree > *:not(.trunk) > .face")
+);
+for (let i = 0; i < 100; i++) {
+  // const treeFace = document.querySelector(".tree .bottom .face.front");
+  const filteredTreeFaces = treeFaces.filter(
+    (treeFace) =>
+      ((8 * 8 * treeFace.querySelectorAll(".light").length) /
+        (treeFace.offsetWidth * treeFace.offsetHeight)) *
+        100 <
+      2
+  );
+  const treeFace =
+    filteredTreeFaces[getRandomIntInclusive(0, filteredTreeFaces.length - 1)];
+
+  const light = document.createElement("div");
+  light.classList.add("light");
+  light.style.top = `${getRandomIntInclusive(8, treeFace.offsetHeight - 8)}px`;
+  light.style.left = `${getRandomIntInclusive(8, treeFace.offsetWidth - 8)}px`;
+  // light.style.backgroundColor = `rgb(${getRandomIntInclusive(
+  //   0,
+  //   255
+  // )},${getRandomIntInclusive(0, 255)},${getRandomIntInclusive(0, 255)})`;
+  const backgroundColor = `hsl(
+    ${getRandomIntInclusive(0, 360)}deg,
+    ${getRandomIntInclusive(60, 100)}%,
+    ${getRandomIntInclusive(50, 85)}%
+  )`;
+  light.style.backgroundColor = backgroundColor;
+  light.style.boxShadow = `0 0 15px ${backgroundColor}`;
+  treeFace.append(light);
+}
+
 function getRandomIntInclusive(min, max) {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);

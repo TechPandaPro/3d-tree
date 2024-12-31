@@ -687,3 +687,25 @@ body {
 .tree > .top-2 > .face.middle {
   transform: rotateX(-90deg) translateZ(80px) translateY(-50%);
 }
+
+.light {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  animation: light 5s alternate infinite;
+}
+
+@keyframes light {
+  from {
+    filter: brightness(100%);
+  }
+
+  to {
+    filter: brightness(120%);
+  }
+}
