@@ -30,6 +30,25 @@ body {
   transform: translateX(-50%);
 }
 
+.snowContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: blue; */
+  z-index: -1;
+}
+
+.snow {
+  /* width: 10px; */
+  /* height: 10px; */
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  transition-timing-function: linear !important;
+}
+
 .sceneContainer {
   perspective: 1000px;
   /* perspective-origin: -150px -150px; */
