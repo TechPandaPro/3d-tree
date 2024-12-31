@@ -249,8 +249,8 @@ body {
 }
 
 .tree > .trunk {
-  width: 50px;
-  height: 100px;
+  width: 40px;
+  height: 80px;
   left: 50%;
   bottom: 0;
   position: absolute;
@@ -279,19 +279,19 @@ body {
 }
 
 .tree > .trunk > .face.front {
-  transform: rotateX(0deg) translateZ(25px);
+  transform: rotateX(0deg) translateZ(20px);
 }
 
 .tree > .trunk > .face.back {
-  transform: rotateX(-180deg) translateZ(25px);
+  transform: rotateX(-180deg) translateZ(20px);
 }
 
 .tree > .trunk > .face.left {
-  transform: rotateY(-90deg) translateZ(25px);
+  transform: rotateY(-90deg) translateZ(20px);
 }
 
 .tree > .trunk > .face.right {
-  transform: rotateY(90deg) translateZ(25px);
+  transform: rotateY(90deg) translateZ(20px);
 }
 
 .tree > .trunk > .face.top {
@@ -299,16 +299,17 @@ body {
 }
 
 .tree > .trunk > .face.bottom {
-  transform: rotateX(-90deg) translateZ(100px) translateY(-50%);
+  transform: rotateX(-90deg) translateZ(80px) translateY(-50%);
 }
 
 .tree > .bottom {
-  width: 300px;
-  height: 80px;
+  width: 240px;
+  height: 70px;
   /* left: 25px; */
-  left: 0;
-  bottom: 100px;
+  left: 50%;
+  bottom: 80px;
   position: absolute;
+  transform: translateX(-50%);
 }
 
 .tree > .bottom > .face {
@@ -328,24 +329,24 @@ body {
 
 .tree > .bottom > .face.top,
 .tree > .bottom > .face.bottom {
-  height: 300px;
+  height: 240px;
   transform-origin: center top;
 }
 
 .tree > .bottom > .face.front {
-  transform: rotateX(0deg) translateZ(150px);
+  transform: rotateX(0deg) translateZ(120px);
 }
 
 .tree > .bottom > .face.back {
-  transform: rotateX(-180deg) translateZ(150px);
+  transform: rotateX(-180deg) translateZ(120px);
 }
 
 .tree > .bottom > .face.left {
-  transform: rotateY(-90deg) translateZ(150px);
+  transform: rotateY(-90deg) translateZ(120px);
 }
 
 .tree > .bottom > .face.right {
-  transform: rotateY(90deg) translateZ(150px);
+  transform: rotateY(90deg) translateZ(120px);
 }
 
 .tree > .bottom > .face.top {
@@ -353,5 +354,170 @@ body {
 }
 
 .tree > .bottom > .face.bottom {
+  transform: rotateX(-90deg) translateZ(70px) translateY(-50%);
+}
+
+.tree > .middle {
+  width: 180px;
+  height: 65px;
+  left: 50%;
+  /* left: 0; */
+  bottom: 150px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.tree > .middle > .face {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  box-sizing: border-box;
+
+  background-color: green;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: darkgreen;
+}
+
+.tree > .middle > .face.top,
+.tree > .middle > .face.bottom {
+  height: 65px;
+  transform-origin: center top;
+}
+
+.tree > .middle > .face.front {
+  transform: rotateX(0deg) translateZ(90px);
+}
+
+.tree > .middle > .face.back {
+  transform: rotateX(-180deg) translateZ(90px);
+}
+
+.tree > .middle > .face.left {
+  transform: rotateY(-90deg) translateZ(90px);
+}
+
+.tree > .middle > .face.right {
+  transform: rotateY(90deg) translateZ(90px);
+}
+
+.tree > .middle > .face.top {
+  transform: rotateX(90deg) translateZ(0px) translateY(-50%);
+}
+
+.tree > .middle > .face.bottom {
+  transform: rotateX(-90deg) translateZ(65px) translateY(-50%);
+}
+
+.tree > .top {
+  width: 120px;
+  height: 60px;
+  left: 50%;
+  /* left: 0; */
+  bottom: 215px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.tree > .top > .face {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  box-sizing: border-box;
+
+  background-color: green;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: darkgreen;
+}
+
+.tree > .top > .face.top,
+.tree > .top > .face.bottom {
+  height: 60px;
+  transform-origin: center top;
+}
+
+.tree > .top > .face.front {
+  transform: rotateX(0deg) translateZ(60px);
+}
+
+.tree > .top > .face.back {
+  transform: rotateX(-180deg) translateZ(60px);
+}
+
+.tree > .top > .face.left {
+  transform: rotateY(-90deg) translateZ(60px);
+}
+
+.tree > .top > .face.right {
+  transform: rotateY(90deg) translateZ(60px);
+}
+
+.tree > .top > .face.top {
+  transform: rotateX(90deg) translateZ(0px) translateY(-50%);
+}
+
+.tree > .top > .face.bottom {
+  transform: rotateX(-90deg) translateZ(63px) translateY(-50%);
+}
+
+.tree > .top-2 {
+  width: 70px;
+  height: 55px;
+  left: 50%;
+  /* left: 0; */
+  bottom: 275px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.tree > .top-2 > .face {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  box-sizing: border-box;
+
+  background-color: green;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: darkgreen;
+}
+
+.tree > .top-2 > .face.top,
+.tree > .top-2 > .face.bottom {
+  height: 55px;
+  transform-origin: center top;
+}
+
+.tree > .top-2 > .face.front {
+  transform: rotateX(0deg) translateZ(35px);
+}
+
+.tree > .top-2 > .face.back {
+  transform: rotateX(-180deg) translateZ(35px);
+}
+
+.tree > .top-2 > .face.left {
+  transform: rotateY(-90deg) translateZ(35px);
+}
+
+.tree > .top-2 > .face.right {
+  transform: rotateY(90deg) translateZ(35px);
+}
+
+.tree > .top-2 > .face.top {
+  transform: rotateX(90deg) translateZ(0px) translateY(-50%);
+}
+
+.tree > .top-2 > .face.middle {
   transform: rotateX(-90deg) translateZ(80px) translateY(-50%);
 }
